@@ -1,10 +1,16 @@
-ls = []
-for i in range(int(input())):
-    s = input()
-    if len(s) > 10:
-        s = s[0]+str(len(s)-2)+s[-1]
-    ls.append(s)
-print(*ls, sep='\n')
+s = input()
+st = ['-']
+for c in s:
+    if c in '([{':
+        st.append(c)
+    else:
+        if st[-1] + c in ['()','[]','{}']:
+            st.pop()
+        else:
+            print('NO')
+            break
+else:
+    print('YES' if st == ['-'] else 'NO')
 
 '''
 
