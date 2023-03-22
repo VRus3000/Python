@@ -1,16 +1,8 @@
-s = input()
-st = ['-']
-for c in s:
-    if c in '([{':
-        st.append(c)
-    else:
-        if st[-1] + c in ['()','[]','{}']:
-            st.pop()
-        else:
-            print('NO')
-            break
-else:
-    print('YES' if st == ['-'] else 'NO')
+lin, lout = list(input().split()), []
+for i in lin:
+    if i.lower() not in map(str.lower, lout):
+        lout.append(i)
+print(*lout)
 
 '''
 
