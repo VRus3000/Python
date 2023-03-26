@@ -1,3 +1,14 @@
+i = input()
+ar, i, j, cnt = list(map(int, input().split())), 0, 0, 0
+
+for i in range(len(ar)-1):
+    for j in range(len(ar)-i-1):
+        if ar[j] > ar[j+1]:
+            ar[j], ar[j+1] = ar[j+1], ar[j]
+            cnt += 1
+print(*ar)
+print(cnt)
+
 
 
     
