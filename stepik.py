@@ -1,19 +1,9 @@
-n = int(input())
-ar = [list(map(int, input().split())) for _ in range(n)]
-for i in range(n-1, -1, -1):
-        print(' '.join(str(ar[j][i]) for j in range(n-1, -1, -1)))
+n, m = map(int,input().split())
+ar = [sum(map(int, input().split())) for _ in range(n)]
+print(max(ar), ar.index(max(ar)), sep='\n')
 
 
-# for i in range(10):
-#     if digs[i]:
-#         print(i, digs[i])
 
-# '''
-
-# 4
-# 1 2 3 4 5
-# 3 
-# 7 9 4 2 8
 
 # m, y, w, x = [sorted([*map(int,input().split())]) for i in range(4)]
 
